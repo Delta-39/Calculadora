@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffdb58;
+    font-family: 'Lexend Mega', sans-serif;
+}
+
+.container {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calculadora {
+    width: 500px;
+    height: auto;
+    background-color: rgb(182, 182, 182);
+    border: 3px black solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.screen {
+    height: 86px;
+    padding: 50px 20px 10px 20px;
+    border: 3px black solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: white;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.btn.clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #ff6b6b;
+}
+
+.btn.delete {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: #fd98ca;
+}
+
+.btn {
+    position: relative;
+    padding: 20px;
+    font-family: 'Lexend Mega', sans-serif;
+    font-size: 1rem;
+    border: 3px black solid;
+    border-radius: 10px;
+    box-shadow: 3px 4px 0px 1px #000;
+    transition: transform .2s ease;
+}
+
+.btn:active {
+    transform: translate(3px, 4px);
+    box-shadow: none;
+}
+
+.btn.operator {
+    background-color: #E3A018;
+}
+
+.btn.result {
+    background-color: #7FBC8C;
+}
+
+.credits {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.bx {
+    padding-left: 20px;
+    font-size: 2.5rem;
+    color: #000;
+    transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .calculadora{
+        width: 300px;
+    }
+    .btn{
+        padding: 10px;
+    }
+
+    .credits{
+        font-size: 0.6rem;
+    }
+}
